@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Patient Profile
+  </title>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #0056b3;
+        }
+        .navbar a, .navbar input {
+            color: white;
+        }
+        .navbar input {
+            background-color: #34495e;
+            border: none;
+        }
+        .profile-header {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .profile-header h2 {
+            margin: 0;
+        }
+        .profile-header .btn-group {
+            margin-left: 10px;
+        }
+        .profile-content {
+            padding: 20px;
+        }
+        .profile-content h3 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .profile-content .row {
+            margin-bottom: 20px;
+        }
+        .profile-content .col-md-4 img {
+            width: 100%;
+            height: auto;
+        }
+        .profile-content .col-md-8 {
+            padding-left: 30px;
+        }
+        .profile-content .col-md-8 p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .profile-content .col-md-8 p span {
+            font-weight: bold;
+        }
+        .profile-content .col-md-8 .btn {
+            margin-top: 10px;
+        }
+        .profile-content .notes, .profile-content .history, .profile-content .groups {
+            margin-top: 20px;
+        }
+        .profile-content .notes h4, .profile-content .history h4, .profile-content .groups h4 {
+            color: #8bc34a;
+        }
+        .profile-content .notes p, .profile-content .history p, .profile-content .groups p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .profile-content .notes p span, .profile-content .history p span, .profile-content .groups p span {
+            color: #3498db;
+        }
+  </style>
+ </head>
+ <body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+   <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        Welcome Patient
+    </a>
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+     <span class="navbar-toggler-icon">
+     </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Calendar
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Contacts
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        EMR
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Billing
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Reports
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Communications
+       </a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#">
+        Notifications
+       </a>
+      </li>
+     </ul>
+     <form class="d-flex">
+      <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search"/>
+     </form>
+     <a class="nav-link" href="#">
+      Practo Ray V6
+     </a>
+    </div>
+   </div>
+  </nav>
+  <div class="container-fluid profile-header">
+   <div class="row">
+    <div class="col-md-8">
+     <h2>
+     Patient Name
+     </h2>
+     <p>
+      Patient ID:    , 25 years
+     </p>
+
+    </div>
+    <div class="col-md-4 text-end">
+     <div aria-label="Profile Actions" class="btn-group" role="group">
+
+      <button class="btn btn-primary">
+       View EMR
+      </button>
+      <button class="btn btn-primary">
+       View Billing
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="container profile-content">
+   <div class="row">
+    <div class="col-md-4">
+     <img src="../images/WhatsApp%20Image%202024-12-17%20at%203.34.35%20PM.jpeg"  alt="Image" height="150" width="150";/>
+     <a class="d-block mt-2" href="#">
+      Change Photo
+
+
+     </a>
+    </div>
+    <div class="col-md-8">
+     <h3>
+      Patient Profile
+     </h3>
+     <p>
+      <span>
+       Patient Name:
+      </span>
+      Enter Patient Name
+
+     </p>
+     <p>
+      <span>
+       Patient ID:
+      </span>
+      Enter Patient ID
+     </p>
+     <p>
+      <span>
+       Gender:
+      </span>
+      Enter Patient Gender
+     </p>
+     <p>
+      <span>
+       Date of Birth:
+      </span>
+      Enter Patient D of birth
+     </p>
+     <p>
+      <span>
+       Blood Group:
+      </span>
+      O+
+     </p>
+     <p>
+      <span>
+       Family:
+      </span>
+      Parent:
+      <span class="text-primary">
+       Enter Patients Parent Name
+      </span>
+      Spouse:
+      <span class="text-primary">
+       Enter Patients Spouse Name
+      </span>
+     </p>
+     <button class="btn btn-primary">
+      Edit Patient Profile
+     </button>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h3>
+      Contact Details
+     </h3>
+     <p>
+      <span>
+       Primary Mobile No.:
+      </span>
+      +91987654321
+     </p>
+     <p>
+      <span>
+       Email Address:
+      </span>
+      neils@someemail.com
+     </p>
+     <p>
+      <span>
+       Street Address:
+      </span>
+      #10 4th Main 20th Cross
+     </p>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6 notes">
+     <h4>
+      Patient Notes
+     </h4>
+     <input class="form-control mb-2" placeholder="Type note here" type="text"/>
+     <p>
+      <span>
+       routine check up on Wednesday
+      </span>
+      <br/>
+      Enter DR name and date
+     </p>
+    </div>
+    <div class="col-md-6 history">
+     <h4>
+      Medical History
+     </h4>
+     <p>
+      Allergies
+     </p>
+     <p>
+      Undergone Dental Treatment Earlier
+     </p>
+     <p>
+      Low Blood Pressure
+     </p>
+     <a class="text-primary" href="#">
+      Edit
+     </a>
+         <button type="button" class="btn btn-primary w-100" onclick="window.location.href='/homepat'">patient homepage</button>
+
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6 groups">
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

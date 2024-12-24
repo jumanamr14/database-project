@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example</title>
+    <!-- Link to Local Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+  <body>
+  {% if userdata %}
+  <div class="container">
+   <div class="row">
+       <h1>User Profile</h1>
+   </div>
+      <br>
+      <div class="row">
+          Logged in:<strong> {{ userdata.firstname }} | {{ userdata.lastname }} | <a href="/logout"> Logout</a></strong>
+      </div>
+      <br><br>
+      <div class="row">
+          <h2>Welcome to the user profile page....</h2>
+      </div>
+  </div>
+  {% else %}
+  <a href ="/loginpat">loginpat</a>
+  <a href="/logindoc">logindoc</a>
+  {% endif %}
+
+  </body>
+</html>

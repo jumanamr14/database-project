@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example with Custom Styles</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8fafa; /* Light gray background */
+        }
+
+        .register-container {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .register-heading {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-register {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-register:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<div class="card mb-4">
+    <div class="Sign up form">
+        {% if msg %}
+        <div class="alert alert-warning">{{ msg }}</div>
+        {% endif %}
+        <h3 class="card-title text-center mb-4">Sign Up!</h3>
+        <form action="/registerpat" method="POST">
+            <div class="mb-3">
+                <label for="id" class="form-label">id</label>
+                <label for="id"></label><input type="text" class="form-control" id="id" name="id" placeholder="Enter your id" required>
+            </div>
+            <div class="mb-3">
+                <label for="firstname" class="form-label">firstname</label>
+                <label for="firstname"></label><input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your firstname" required>
+            </div>
+            <div class="mb-3">
+                <label for="middlename" class="form-label">middlename</label>
+                <label for="middlename"></label><input type="text" class="form-control" id="middlename" name="middlename" placeholder="Enter your middlename" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">lastname</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your lastname" required>
+            </div>
+{#        #to addd a condition not bot choose both #}
+         <div class="mb-3">
+        <label class="form-label">Gender</label><br>
+        <input type="checkbox" id="M" name="gender" value="M">
+        <label for="M">Male</label><br>
+        <input type="checkbox" id="F" name="gender" value="F">
+        <label for="F">Female</label>
+         </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">age</label>
+                <input type="text" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+            </div>
+            <div class="mb-3">
+                <label for="Condition" class="form-label">Condition</label>
+                <input type="text" class="form-control" id="Condition" name="Condition" placeholder="Condition" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmpassword" class="form-label">confirmpassword</label>
+                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="confirmpassword" required>
+            </div>
+
+{#            <button type="submit" class="btn btn-primary w-100" >Register</button>#}
+            <button type="submit" class="btn btn-primary w-100" onclick="window.location.href='/patprofile'">Create Profile</button>
+
+            <p class="text-center">Have an account? <a href="/loginpat"> loginpat </a></p>
+        </form>
+    </div>
+</div>
