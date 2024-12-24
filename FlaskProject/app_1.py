@@ -9,7 +9,7 @@ app.secret_key = 'your_secret_key'
 database_connection_session = psycopg2.connect(
     database="postgres",
     user="postgres",
-    password="eng5534891",
+    password="hana1109",
     host="localhost",
     port="5432"
 )
